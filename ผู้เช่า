@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <title>ผู้เช่า</title>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background-color: #B5D7FF;
+        }
+
+        .tab {
+            float: left;
+            background-color: #B5D7FF;
+            width: 20%;
+            height: 300px;
+        }
+
+        .tab button {
+            display: block;
+            background-color: inherit;
+            color: black;
+            padding: 10px 16px;
+            width: 100%;
+            border: none;
+            outline: none;
+            text-align: left;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 20px;
+        }
+
+        .tab button:hover {
+            background-color: #f1f1f1;
+        }
+
+        .tab button.active {
+            background-color: #f1f1f1;
+        }
+
+        .tabcontent {
+            float: left;
+            padding: 0px 12px;
+            width: 70%;
+            padding: 1.5em;
+            overflow: hidden;
+            margin-left: 50px;
+            border-left: none;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="top-header">
+        <p align="top-header"><img src="BanCholaphumlogo.png" alt="โลโก้บ้านชลภูมิ" width="auto" height="auto"></p>
+    </header>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">รายละเอียดการเช่า</button>
+        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">ใบแจ้งหนี้</button>
+        <button class="tablinks" onclick="openCity(event, 'Pay')" id="defaultOpen">แจ้งชำระเงิน</button>
+        <button class="tablinks" onclick="openCity(event, 'Out')" id="defaultOpen">แจ้งคืนห้องพัก</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">ออกจากระบบ</button>
+    </div>
+
+    <div id="London" class="tabcontent">
+        <h3>London</h3>
+        <p>London is the capital city of England.</p>
+    </div>
+
+    <div id="Pay" class="tabcontent">
+        <div class="row  align-items-center justify-content-center">
+            <div class="bg-white rounded p-4 shadow" style="width: 700px; height: auto;">
+                <h1 style="color:#000000;font-size: 40px; margin-bottom: 20px; text-align:center;">
+                    แจ้งชำระเงิน
+                </h1>
+                <form class="row g-3 ">
+                    <div class="col-md-12">
+                        <label for="Invoice" class="form-label">หมายเลขใบแจ้งหนี้</label>
+                        <input type="id" class="form-control" id="Invoice" style="background-color:#D9D9D9">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="Date" class="form-label">วันที่ชำระเงิน</label>
+                        <input type="date" class="form-control" id="Date" style="background-color:#D9D9D9">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="Time" class="form-label">เวลา</label>
+                        <input type="time" class="form-control" id="Time" style="background-color:#D9D9D9">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="Pay" class="form-label">จำนวนที่ชำระ</label>
+                        <input type="number" class="form-control" id="Pay" style="background-color:#D9D9D9">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="img" class="form-label">อัพโหลดการชำระเงิน</label>
+                        <input type="file" class="form-control" id="img" maxlength="10"
+                            style="background-color:#D9D9D9">
+                    </div>
+                    <div class="col-12 d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary"
+                            style="background-color: #B5D7FF; color: #000000;">บันทึกการชำระเงิน</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="Out" class="tabcontent">
+        <h1 style="color:#f90505;font-size: 25px; margin-left: 50px;">
+            ในการคืนห้องพักจะต้องแจ้งล่วงหน้าอย่างน้อย 30 วัน
+        </h1>
+        <div class="col-md-4">
+            <label for="Pay" class="form-label">ห้อง</label>
+            <input type="number" class="form-control" id="Pay" style="background-color:#D9D9D9">
+        </div>
+        <br>
+        <div class="col-md-4">
+            <label for="Date" class="form-label">วันที่ย้ายออก</label>
+            <input type="date" class="form-control" id="Date" style="background-color:#D9D9D9">
+        </div>
+        <br>
+        <div class="col-12 d-flex">
+            <button type="submit" class="btn btn-primary"
+                style="background-color: #B5D7FF; color: #000000;">แจ้งคืนห้องพัก</button>
+        </div>
+    </div>
+
+    <div id="Tokyo" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        document.getElementById("defaultOpen").click();
+    </script>
+
+</body>
+
+</html>
