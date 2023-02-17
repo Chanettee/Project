@@ -135,48 +135,48 @@
                 </h1>
                 <form class="row g-3 ">
                     <div class="col-md-6">
-                        <label for="Rental" class="form-label">รหัสการเช่า</label>
-                        <input type="id" class="form-control" id="Rental" required style="background-color:#D9D9D9">
+                        <label for="checkin_ID" class="form-label">รหัสการเช่า</label>
+                        <input type="id" class="form-control" id="checkin_ID" required style="background-color:#D9D9D9">
                     </div>
                     <div class="col-md-6">
-                        <label for="User ID" class="form-label">รหัสผู้ใช้</label>
-                        <input type="id" class="form-control" id="User ID" style="background-color:#D9D9D9">
+                        <label for="user_ID" class="form-label">รหัสผู้ใช้</label>
+                        <input type="id" class="form-control" id="user_ID" style="background-color:#D9D9D9">
                     </div>
                     <div class="col-md-6">
-                        <label for="Room" class="form-label">ห้องพัก</label>
-                        <input type="number" class="form-control" id="Room" required style="background-color:#D9D9D9">
+                        <label for="room" class="form-label">ห้องพัก</label>
+                        <input type="number" class="form-control" id="room" required style="background-color:#D9D9D9">
                     </div>
                     <div class="col-md-6">
-                        <label for="Deposit" class="form-label">เงินมัดจำ</label>
-                        <input type="number" class="form-control" id="Deposit" required
+                        <label for="deposit" class="form-label">เงินมัดจำ</label>
+                        <input type="number" class="form-control" id="deposit" required
                             style="background-color:#D9D9D9">
                     </div>
                     <div class="col-md-6">
-                        <label for="Last Name" class="form-label">ชื่อ - สกุล</label>
-                        <input type="name" class="form-control" id="Last Name" required
+                        <label for="fullname" class="form-label">ชื่อ - สกุล</label>
+                        <input type="name" class="form-control" id="fullname" required
                             style="background-color:#D9D9D9">
                     </div>
                     <div class="col-md-6">
-                        <label for="Card Copy" class="form-label">สำเนาบัตรประชาชน</label>
-                        <input type="file" class="form-control" id="card copy" required
+                        <label for="IDcard_img" class="form-label">สำเนาบัตรประชาชน</label>
+                        <input type="file" class="form-control" id="IDcard_img" required
                             style="background-color:#D9D9D9">
                     </div>
                     <div class="col-md-6">
-                        <label for="Card ID" class="form-label">เลขบัตรประชาชน</label>
-                        <input type="id" class="form-control" id="Card ID" required style="background-color:#D9D9D9">
+                        <label for="IDcard" class="form-label">เลขบัตรประชาชน</label>
+                        <input type="id" class="form-control" id="IDcard" required style="background-color:#D9D9D9">
                     </div>
                     <div class="col-md-6">
-                        <label for="Stay" class="form-label">วันที่เข้าพัก</label>
-                        <input type="date" class="form-control" id="Stay" required style="background-color:#D9D9D9">
+                        <label for="date_In" class="form-label">วันที่เข้าพัก</label>
+                        <input type="date" class="form-control" id="date_In" required style="background-color:#D9D9D9">
                     </div>
                     <div class="col-md-6">
-                        <label for="Address" class="form-label">ที่อยู่</label>
-                        <textarea type="text" class="form-control" id="Address" required rows="3"
+                        <label for="address" class="form-label">ที่อยู่</label>
+                        <textarea type="text" class="form-control" id="address" required rows="3"
                             style="background-color:#D9D9D9"></textarea>
                     </div>
                     <div class="col-md-6">
-                        <label for="Out" class="form-label">วันที่ออก</label>
-                        <input type="date" class="form-control" id="Out" required style="background-color:#D9D9D9">
+                        <label for="date_Out" class="form-label">วันที่ออก</label>
+                        <input type="date" class="form-control" id="date_Out" required style="background-color:#D9D9D9">
                     </div>
                     <div class="col-12">
                         <div class="form-check">
@@ -206,84 +206,87 @@
                         </h5><br>
                         <div class="row" style="margin-right: 10px; margin-left: 6px;">
                             <div class="col-8">
-                                <label for="vehicle1">เตียงพร้อมฟูก</label>
+                                <label for="bed">เตียงพร้อมฟูก</label>
                             </div>
                             <div class="col-2">
-                                <input type="checkbox" name="vehicle1" value="Bike">
+                                <input type="checkbox" name="bed_Yes" value="appliance" id="bed">
                             </div>
                             <div class="col-2">
-                                <input type="checkbox" name="vehicle1" value="Bike"><br>
+                                <input type="checkbox" name="bed_No" value="appliance" ><br>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-right: 10px; margin-left: 6px;">
+                            <div class="col-8">
+                                <label for="table">โต๊ะ</label>
+                            </div>
+                            <div class="col-2">
+                                <input type="checkbox" name="table_Yes" value="appliance" id="table">
+                            </div>
+                            <div class="col-2">
+                                <input type="checkbox" name="table_No" value="appliance" id="table"><br>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-right: 10px; margin-left: 6px;">
+                            <div class="col-8">
+                                <label for="Closet">ตุู้เสื้ผ้า</label>
+                            </div>
+                            <div class="col-2">
+                                <input type="checkbox" name="Closet_Yes" value="appliance" id="Closet">
+                            </div>
+                            <div class="col-2">
+                                <input type="checkbox" name="Closet_No" value="appliance" id="Closet"><br>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-right: 10px; margin-left: 6px;">
+                            <div class="col-8">
+                                <label for="tv_shelf">ชั้นวางทีวี</label>
+                            </div>
+                            <div class="col-2">
+                                <input type="checkbox" name="tv_shelf_Yes" value="appliance" id="tv_shelf">
+                            </div>
+                            <div class="col-2">
+                                <input type="checkbox" name="tv_shelf_No" value="appliance" id="tv_shelf"><br>
                             </div>
                         </div>
                         <div class="row" style="margin-right: 10px; margin-left: 6px;">
                             <div class="col-8">
-                                <label for="vehicle1">โต๊ะ</label>
+                                <label for="shoe_shelf">ชั้นวางรองเท้า</label>
                             </div>
                             <div class="col-2">
-                                <input type="checkbox" name="vehicle1" value="Bike">
+                                <input type="checkbox" name="shoe_shelf_Yes" value="appliance" id="shoe_shelf">
                             </div>
                             <div class="col-2">
-                                <input type="checkbox" name="vehicle1" value="Bike"><br>
-                            </div>
-                        </div>
-                        <div class="row" style="margin-right: 10px; margin-left: 6px;">
-                            <div class="col-8">
-                                <label for="vehicle1">ตุู้เสื้ผ้า</label>
-                            </div>
-                            <div class="col-2">
-                                <input type="checkbox" name="vehicle1" value="Bike">
-                            </div>
-                            <div class="col-2">
-                                <input type="checkbox" name="vehicle1" value="Bike"><br>
-                            </div>
-                        </div>
-                        <div class="row" style="margin-right: 10px; margin-left: 6px;">
-                            <div class="col-8">
-                                <label for="vehicle1">ชั้นวางทีวี</label>
-                            </div>
-                            <div class="col-2">
-                                <input type="checkbox" name="vehicle1" value="Bike">
-                            </div>
-                            <div class="col-2">
-                                <input type="checkbox" name="vehicle1" value="Bike"><br>
-                            </div>
-                        </div>
-                        <div class="row" style="margin-right: 10px; margin-left: 6px;">
-                            <div class="col-8">
-                                <label for="vehicle1">ชั้นวางรองเท้า</label>
-                            </div>
-                            <div class="col-2">
-                                <input type="checkbox" name="vehicle1" value="Bike">
-                            </div>
-                            <div class="col-2">
-                                <input type="checkbox" name="vehicle1" value="Bike"><br>
+                                <input type="checkbox" name="shoe_shelf_No" value="appliance" id="shoe_shelf"><br>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-5">
-                        <label for="Room" class="form-label">เลขห้อง</label>
-                        <input type="number" class="form-control" id="Room" required style="background-color:#D9D9D9">
+                        <label for="room" class="form-label">เลขห้อง</label>
+                        <input type="number" class="form-control" id="room" required style="background-color:#D9D9D9">
                     </div>
                     <div class="col-md-5">
-                        <label for="Deposit" class="form-label">อาคาร</label>
-                        <select class="form-select" aria-label="Deposit" required style="background-color:#D9D9D9">
+                        <label for="deposit" class="form-label">อาคาร</label>
+                        <select class="form-select" aria-label="deposit" required style="background-color:#D9D9D9">
                             <option selected>เลือก</option>
                             <option value="1">อารคาร 1</option>
                             <option value="2">อารคาร 2</option>
                         </select>
                     </div>
                     <div class="col-md-5 mt-2">
-                        <label for="Description" class="form-label">คำอธิบาย</label>
-                        <textarea type="text" class="form-control" id="Description"
+                        <label for="room_detail" class="form-label">คำอธิบาย</label>
+                        <textarea type="text" class="form-control" id="room_detail"
                             style="background-color:#D9D9D9"></textarea>
                     </div>
                     <div class="col-md-5 mt-2">
-                        <label for="Rent" class="form-label">ค่าเช่า</label>
-                        <input type="number" class="form-control" id="Rent" required style="background-color:#D9D9D9">
+                        <label for="room_rate" class="form-label">ค่าเช่า</label>
+                        <input type="number" class="form-control" id="room_rate" required style="background-color:#D9D9D9">
                     </div>
                     <div dropdown-container class="col-md-5 mt-2">
-                        <label for="Status" class="form-label">สถานะห้องพัก</label>
-                        <select class="form-select" aria-label="Status" required style="background-color:#D9D9D9">
+                        <label for="roomstatus_ID" class="form-label">สถานะห้องพัก</label>
+                        <select class="form-select" aria-label="roomstatus_ID" required style="background-color:#D9D9D9">
                             <option selected>เลือก</option>
                             <option value="1">ว่าง</option>
                             <option value="2">ไม่ว่าง</option>
